@@ -33,74 +33,76 @@ nvme0n1                 259:0    0 476,9G  0 disk
 
 ## Structure
 ```
-├── desktop
-│   ├── gdm
-│   │   └── gdm.nix
-│   ├── gnome
-│   │   ├── default.nix
-│   │   ├── packages.nix
-│   │   └── stylix.nix
-│   ├── kde
-│   │   ├── default.nix
-│   │   └── packages.nix
-│   └── sddm
-│       └── sddm.nix
-├── dev
-│   ├── containers.nix
-│   ├── git.nix
-│   └── libraries.nix
-├── flake.lock
-├── flake.nix
-├── home-manager
-│   ├── desktop
-│   │   └── gnome
-│   │       ├── extensions.nix
-│   │       └── settings.nix
-│   ├── dev
-│   │   ├── editors
-│   │   │   └── zed.nix
-│   │   └── languages
-│   │       └── default.nix
-│   ├── fish.nix
-│   ├── home.nix
-│   ├── packages
-│   │   ├── games.nix
-│   │   ├── others.nix
-│   │   ├── proton.nix
-│   │   └── system.nix
-│   └── programs.nix
 ├── hosts
-│   └── thinkbook
+│   └── kinni
 │       ├── boot.nix
 │       ├── configuration.nix
+│       ├── desktop
+│       │   ├── gnome
+│       │   │   └── settings
+│       │   │       ├── default.nix
+│       │   │       ├── gdm.nix
+│       │   │       ├── packages.nix
+│       │   │       └── stylix.nix
+│       │   ├── niri
+│       │   │   └── default.nix
+│       │   └── plasma
+│       │       └── settings
+│       │           ├── default.nix
+│       │           ├── packages.nix
+│       │           └── sddm.nix
+│       ├── dev
+│       │   ├── default.nix
+│       │   ├── git.nix
+│       │   └── libraries.nix
+│       ├── emi.nix
 │       ├── fs.nix
 │       ├── hardware-configuration.nix
-│       └── hardware.nix
-├── modules
-│   ├── programs
-│   │   ├── default.nix
-│   │   └── services.nix
-│   └── system
-│       ├── audio.nix
-│       ├── locale.nix
-│       ├── network.nix
-│       ├── nix-settings.nix
-│       ├── power.nix
-│       └── user.nix
-├── packages
-│   ├── default.nix
-│   └── settings.nix
-├── profiles
-│   └── powersave.nix
+│       ├── hardware.nix
+│       ├── home-manager
+│       │   └── nakko
+│       │       ├── home.nix
+│       │       ├── modules
+│       │       │   ├── desktop
+│       │       │   │   ├── gnome
+│       │       │   │   │   ├── extensions.nix
+│       │       │   │   │   └── settings.nix
+│       │       │   │   └── niri
+│       │       │   │       ├── binds.nix
+│       │       │   │       └── default.nix
+│       │       │   ├── dev
+│       │       │   │   ├── editors
+│       │       │   │   │   └── zed.nix
+│       │       │   │   └── languages
+│       │       │   │       └── default.nix
+│       │       │   ├── packages
+│       │       │   │   ├── games.nix
+│       │       │   │   ├── others.nix
+│       │       │   │   └── system.nix
+│       │       │   └── terminal
+│       │       │       ├── alacritty
+│       │       │       │   └── alacritty.nix
+│       │       │       └── fish.nix
+│       │       └── programs.nix
+│       ├── modules
+│       │   ├── programs
+│       │   │   ├── default.nix
+│       │   │   └── services.nix
+│       │   └── system
+│       │       └── settings.nix
+│       ├── packages
+│       │   ├── default.nix
+│       │   └── settings.nix
+│       └── profiles
+│           └── powersave.nix
 └── README.md
 
-21 directories, 40 files
-
+27 directories, 39 files
 ```
 ---
 ## Current Packages
 
-6 (flatpak), 1736 (nix-system), 1064 (nix-user)
+1926 (nix-system), 1070 (nix-user)
 
 
 ---
