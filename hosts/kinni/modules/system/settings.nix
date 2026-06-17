@@ -81,6 +81,7 @@
     auto-optimise-store = true;
     cores = 0;
     max-jobs = 2;
+    sandbox = true;
   };
   programs.nh = {
     enable = true;

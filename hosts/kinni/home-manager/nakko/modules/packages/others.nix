@@ -22,6 +22,7 @@
 
     #dev
     zed
+    helix
 
   ];
 

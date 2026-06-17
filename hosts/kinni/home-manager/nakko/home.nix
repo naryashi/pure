@@ -13,7 +13,8 @@
     #./modules/desktop/niri/default.nix
 
     #DEV
-    ./modules/dev/editors/zed.nix
+    ./modules/dev/editors/zed/zed.nix
+    ./modules/dev/editors/helix/helix.nix
     ./modules/dev/languages/default.nix
 
     #PACKAGES
@@ -23,7 +24,9 @@
 
     #terminal and shell
     ./modules/terminal/alacritty/alacritty.nix
-    ./modules/terminal/fish.nix
+    ./modules/terminal/kitty/kitty.nix
+    ./modules/terminal/shell/fish.nix
+    ./modules/terminal/shell/zsh.nix
 
     #programs
     ./programs.nix

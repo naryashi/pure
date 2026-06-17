@@ -5,7 +5,7 @@
 }:
 {
   imports = [
-    ../languages/default.nix
+    ../../languages/default.nix
   ];
   programs.zed-editor = {
     enable = true;

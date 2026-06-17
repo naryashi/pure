@@ -6,6 +6,7 @@
   #kernel and boot
 
   #boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_zen.kernel 
   #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
   boot.kernelPackages = pkgs.linuxPackages_cachyos-lto;
   # Bootloader.

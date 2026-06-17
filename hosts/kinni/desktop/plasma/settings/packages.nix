@@ -7,6 +7,10 @@
   environment.systemPackages = with pkgs; [
     kdePackages.kate
     kdePackages.kcalc
+
+    #themes
+    catppuccin-kde
+
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [

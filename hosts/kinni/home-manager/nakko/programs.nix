@@ -1,27 +1,15 @@
 {
-  pkgs,
   ...
 }:
 {
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
-  };
-
-  #shell
-  programs.fish = {
-    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.bash = {
     enable = true;
-  };
-
-  programs.kitty = {
-    enable = true;
-    settings = {
-      shell = "${pkgs.fish}/bin/fish";
-    };
   };
 
   programs.discord = {

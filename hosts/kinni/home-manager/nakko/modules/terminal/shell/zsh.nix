@@ -1,0 +1,41 @@
+{
+  pkgs,
+  ...
+}:
+{
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "copypath"
+        "sudo"
+      ];
+    };
+    shellAliases = {
+      #system
+      off = "shutdown now";
+      upd-all = "nh os switch -u && nh home switch -u";
+
+      #games
+      osu-wine = "steam-run osu-wine";
+
+      #dev
+      zed-rust = "zeditor ~/code/rust";
+
+      zed-python = "zeditor ~/code/python";
+
+      zed-nix = "zeditor /pure";
+
+      #formatter test
+      fmt-test = "find . -name '*.nix' -type f";
+    };
+  };
+  home.packages = with pkgs; [
+    oh-my-zsh
+  ];
+}
