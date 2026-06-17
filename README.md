@@ -22,17 +22,19 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 
 ## Storage Layout
 ```
-nvme0n1                 259:0    0 476,9G  0 disk  
-├─nvme0n1p1             259:1    0     1G  0 part  /boot
-├─nvme0n1p2             259:2    0    16G  0 part  [SWAP]
-├─nvme0n1p3             259:3    0  71,4G  0 part  
-└─nvme0n1p5             259:4    0 388,5G  0 part  /home
+nvme0n1                    259:0    0 476,9G  0 disk  
+├─nvme0n1p1                259:1    0     1G  0 part  /boot
+├─nvme0n1p2                259:2    0  10,3G  0 part  [SWAP]
+├─nvme0n1p3                259:3    0  65,3G  0 part  
+└─nvme0n1p4                259:4    0 400,4G  0 part  /home
 
 ```
 ---
 
 ## Structure
 ```
+├── flake.lock
+├── flake.nix
 ├── hosts
 │   └── kinni
 │       ├── boot.nix
@@ -72,7 +74,10 @@ nvme0n1                 259:0    0 476,9G  0 disk
 │       │       │   │       └── default.nix
 │       │       │   ├── dev
 │       │       │   │   ├── editors
-│       │       │   │   │   └── zed.nix
+│       │       │   │   │   ├── helix
+│       │       │   │   │   │   └── helix.nix
+│       │       │   │   │   └── zed
+│       │       │   │   │       └── zed.nix
 │       │       │   │   └── languages
 │       │       │   │       └── default.nix
 │       │       │   ├── packages
@@ -82,7 +87,11 @@ nvme0n1                 259:0    0 476,9G  0 disk
 │       │       │   └── terminal
 │       │       │       ├── alacritty
 │       │       │       │   └── alacritty.nix
-│       │       │       └── fish.nix
+│       │       │       ├── kitty
+│       │       │       │   └── kitty.nix
+│       │       │       └── shell
+│       │       │           ├── fish.nix
+│       │       │           └── zsh.nix
 │       │       └── programs.nix
 │       ├── modules
 │       │   ├── programs
@@ -97,12 +106,12 @@ nvme0n1                 259:0    0 476,9G  0 disk
 │           └── powersave.nix
 └── README.md
 
-27 directories, 39 files
+31 directories, 42 files
 ```
 ---
 ## Current Packages
 
-1926 (nix-system), 1070 (nix-user)
+1919 (nix-system), 1048 (nix-user)
 
 
 ---
