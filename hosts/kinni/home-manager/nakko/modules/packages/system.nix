@@ -6,20 +6,11 @@
 
   home.packages = with pkgs; [
 
-    #aaa
-    gearlever
-
     #system tools
-    lact
     cpu-x
-    btrfs-assistant
-    snapper
     btrfs-progs
     mission-center
     gparted
-    #gnome-disk-utility
-    kdePackages.filelight
-    kdePackages.partitionmanager
     alsa-utils
 
     #terminal

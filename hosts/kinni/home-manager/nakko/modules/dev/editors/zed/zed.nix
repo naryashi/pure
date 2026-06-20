@@ -35,8 +35,8 @@
     defaultEditor = true;
 
     userSettings = {
-      theme = lib.mkDefault "Base16 pinky";
-      icon_themes = lib.mkForce "Catppucin Mocha";
+      theme = lib.mkDefault "Base16 Catppucin Mocha";
+      icon_themes = lib.mkDefault "Catppucin Mocha";
       vim_mode = false;
       ui_font_size = lib.mkDefault 18;
       buffer_font_size = lib.mkDefault 14;

@@ -21,7 +21,7 @@
 
   virtualisation.podman.enable = true;
 
-  users.users.emi = {
+  users.users.nakko = {
     extraGroups = [
       "docker"
       "podman"

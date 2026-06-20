@@ -18,7 +18,7 @@
   ];
 
   home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/emi/.steam/root/compatibilitytools.d";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/nakko/.steam/root/compatibilitytools.d";
   };
   home.file = lib.mkMerge (
     lib.mapAttrsToList

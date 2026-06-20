@@ -3,7 +3,6 @@
 }:
 {
   imports = [
-    ./emi.nix
     ./boot.nix
     ./fs.nix
     ./hardware.nix
