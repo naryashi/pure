@@ -21,6 +21,7 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 ---
 
 ## Structure
+```
 ├── flake.lock
 ├── flake.nix
 ├── hosts
@@ -90,7 +91,6 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       └── profiles
 │           └── powersave.nix
 └── README.md
-
 33 directories, 37 files
 ```
 ---
