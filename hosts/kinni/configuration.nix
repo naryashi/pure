@@ -8,15 +8,9 @@
     ./hardware.nix
     ./hardware-configuration.nix
     # ./desktop/niri/default.nix
-    # ./desktop/gnome/settings/gdm.nix
-    # ./desktop/gnome/settings/default.nix
-    # ./desktop/gnome/settings/packages.nix
-    #./desktop/gnome/settings/stylix.nix
-    ./desktop/plasma/settings/default.nix
-    ./desktop/plasma/settings/packages.nix
-    ./desktop/plasma/settings/sddm.nix
+    ./desktop/gnome/settings/default.nix
+    #./desktop/plasma/settings/default.nix
     ./dev/default.nix
-    ./dev/git.nix
     ./dev/libraries.nix
     ./modules/programs/default.nix
     ./modules/programs/services.nix

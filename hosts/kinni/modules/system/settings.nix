@@ -3,6 +3,9 @@
   ...
 }:
 {
+
+  hardware.bluetooth.enable = true;
+
   #AUDIO
   #jack, pulse, real time and compatibility
   security.rtkit.enable = true;

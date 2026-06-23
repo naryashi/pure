@@ -21,8 +21,8 @@
 
   gtk = {
     iconTheme = {
-      name = "tela-icon-theme";
-      package = pkgs.tela-icon-theme;
+      name = "Adwaita";
+      package = pkgs.adwaita;
     };
 
     gtk3.extraConfig = {

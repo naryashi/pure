@@ -4,9 +4,8 @@
 }:
 {
 
-  imports = [
-    ./packages.nix
-  ];
+  #GDM
+  services.displayManager.gdm.enable = true;
 
   services.desktopManager.gnome.enable = true;
 
@@ -15,6 +14,15 @@
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
   services.gnome.localsearch.enable = false;
+
+  #my packages for gnome
+  environment.systemPackages = with pkgs; [
+    ptyxis
+    gnome-tweaks
+    nautilus
+    dconf-editor
+    gnome-color-manager
+  ];
 
   #exclude pkgs
   environment.gnome.excludePackages = with pkgs; [

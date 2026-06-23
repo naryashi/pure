@@ -35,8 +35,8 @@
     defaultEditor = true;
 
     userSettings = {
-      theme = lib.mkDefault "Base16 Catppucin Mocha";
-      icon_themes = lib.mkDefault "Catppucin Mocha";
+      theme = lib.mkDefault "Base16 Catppuccin Mocha";
+      icon_themes = lib.mkDefault "Catppuccin Mocha";
       vim_mode = false;
       ui_font_size = lib.mkDefault 18;
       buffer_font_size = lib.mkDefault 14;
@@ -51,10 +51,6 @@
             command = [ "nixfmt" ];
           };
         };
-
-        "rust-analyzer" = {
-          binary.path_lookup = true;
-        };
         "rust" = {
           format_on_save = {
             external = {
@@ -63,6 +59,9 @@
             };
           };
         };
+      };
+      "rust-analyzer" = {
+        binary.path_lookup = true;
       };
     };
   };

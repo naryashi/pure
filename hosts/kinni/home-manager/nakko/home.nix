@@ -7,8 +7,8 @@
   imports = [
 
     #DESKTOP
-    #./modules/desktop/gnome/extensions.nix
-    #./modules/desktop/gnome/settings.nix
+    ./modules/desktop/gnome/extensions.nix
+    ./modules/desktop/gnome/settings.nix
     #./modules/desktop/niri/binds.nix
     #./modules/desktop/niri/default.nix
 
@@ -29,7 +29,11 @@
     ./modules/terminal/shell/zsh.nix
 
     #programs
-    ./programs.nix
+    ./modules/settings/games.nix
+    ./modules/settings/programs/others.nix
+
+    #SETTINGS
+    ./modules/settings/fastfetch.nix
 
   ];
 

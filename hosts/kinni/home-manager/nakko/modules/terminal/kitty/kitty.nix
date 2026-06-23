@@ -17,4 +17,5 @@
       shell = "${pkgs.zsh}/bin/zsh";
     };
   };
+  programs.starship.enable = true;
 }

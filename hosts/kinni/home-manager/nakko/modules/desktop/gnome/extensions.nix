@@ -11,7 +11,5 @@
     gnomeExtensions.caffeine
     gnomeExtensions.open-bar
     gnomeExtensions.quick-settings-audio-panel
-    gnomeExtensions.appindicator
-    gnomeExtensions.user-themes
   ];
 }
