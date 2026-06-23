@@ -15,7 +15,6 @@
     #shh
     ente-desktop
     qbittorrent
-
     #multmidia
     vlc
     spotify

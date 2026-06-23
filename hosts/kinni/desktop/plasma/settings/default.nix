@@ -1,4 +1,5 @@
 {
+  lib,
   pkgs,
   ...
 }:
@@ -6,7 +7,7 @@
 
   services = {
     #SDDM
-    displayManager.sddm = {
+    displayManager.sddm = lib.mkDefault {
       enable = true;
       wayland.enable = true;
       autoNumlock = true;
@@ -14,7 +15,7 @@
     };
 
     #PLASMA ENVIROMENT
-    desktopManager.plasma6.enable = true;
+    desktopManager.plasma6.enable = lib.mkDefault true;
 
   };
 
@@ -30,6 +31,10 @@
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
     elisa
+    discover
+    gwenview
+    plasma-nano
+    plasma5support
     kwalletmanager
     plasma-systemmonitor
     sweeper

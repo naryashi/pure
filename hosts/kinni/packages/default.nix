@@ -11,6 +11,8 @@
     tlp
     thinkfan
     home-manager
+    #appimage
     fuse
+    icu
   ];
 }

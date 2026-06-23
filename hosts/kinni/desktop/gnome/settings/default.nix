@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 {
@@ -7,7 +8,7 @@
   #GDM
   services.displayManager.gdm.enable = true;
 
-  services.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = lib.mkDefault true;
 
   #gnome services and default packages
   services.gnome.core-apps.enable = false;

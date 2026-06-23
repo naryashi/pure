@@ -7,10 +7,9 @@
   imports = [
 
     #DESKTOP
-    ./modules/desktop/gnome/extensions.nix
-    ./modules/desktop/gnome/settings.nix
-    #./modules/desktop/niri/binds.nix
-    #./modules/desktop/niri/default.nix
+    #./modules/desktop/gnome/extensions.nix
+    #./modules/desktop/gnome/settings.nix
+    # ./modules/desktop/niri/default.nix
 
     #DEV
     ./modules/dev/editors/zed/zed.nix
