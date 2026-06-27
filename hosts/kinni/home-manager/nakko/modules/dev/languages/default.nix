@@ -53,5 +53,14 @@
     cargo-tarpaulin
     rust-bindgen
     wasm-pack
+
+    #C#
+    dotnet-sdk
+    mono
+    omnisharp-roslyn
+    csharp-ls
+    nuget
+    dotnet-ef
+
   ];
 }

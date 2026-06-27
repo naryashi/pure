@@ -3,13 +3,14 @@
 }:
 
 {
+  xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
   imports = [
 
     #DESKTOP
     #./modules/desktop/gnome/extensions.nix
-    #./modules/desktop/gnome/settings.nix
-    # ./modules/desktop/niri/default.nix
+    ./modules/desktop/gnome/settings.nix
+    ./modules/desktop/niri/default.nix
 
     #DEV
     ./modules/dev/editors/zed/zed.nix

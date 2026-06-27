@@ -7,12 +7,12 @@
     ./fs.nix
     ./hardware.nix
     ./hardware-configuration.nix
-    # ./desktop/niri/default.nix
-    #./desktop/budgie/default.nix
-    #./desktop/gnome/settings/default.nix
-    ./desktop/plasma/settings/default.nix
+    ./desktop/niri/default.nix
+    ./desktop/gnome/settings/default.nix
+    #./desktop/plasma/settings/default.nix
     ./dev/default.nix
     ./dev/libraries.nix
+    ./modules/programs/appimage.nix
     ./modules/programs/default.nix
     ./modules/programs/services.nix
     ./modules/system/settings.nix

@@ -25,9 +25,9 @@
       osu-wine = "steam-run osu-wine";
 
       #dev
-      zed-rust = "zeditor ~/code/rust";
+      zed-rs = "zeditor ~/code/rust";
 
-      zed-python = "zeditor ~/code/python";
+      zed-py = "zeditor ~/code/python";
 
       zed-nix = "zeditor /pure";
 

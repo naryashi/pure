@@ -13,8 +13,8 @@
     steam
     steam-run
     heroic
-    protonup-ng
-    osu-lazer-bin
+    obs-studio
+    gpu-screen-recorder-gtk
   ];
 
   home.sessionVariables = {

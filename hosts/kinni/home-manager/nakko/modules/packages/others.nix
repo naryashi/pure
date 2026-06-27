@@ -23,6 +23,9 @@
     zed
     helix
 
+    #shh
+    javaPackages.compiler.temurin-bin.jdk-26
+
   ];
 
 }
