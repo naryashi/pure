@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }:
 {
@@ -14,17 +13,6 @@
 
   #piper lib
   services.ratbagd.enable = true;
-
-  #lact
-  services.lact.enable = true;
-
-  systemd.services.lact = {
-    description = "GPU control";
-    serviceConfig = {
-      ExecStart = "${pkgs.lact}/bin/lact daemon";
-    };
-    enable = true;
-  };
 
   services.upower.enable = true;
 

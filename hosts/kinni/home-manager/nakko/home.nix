@@ -3,12 +3,10 @@
 }:
 
 {
-  xdg.configFile."niri/config.kdl".source = ./config.kdl;
-
   imports = [
 
     #DESKTOP
-    #./modules/desktop/gnome/extensions.nix
+    ./modules/desktop/gnome/extensions.nix
     ./modules/desktop/gnome/settings.nix
     ./modules/desktop/niri/default.nix
 
@@ -33,7 +31,7 @@
     ./modules/settings/programs/others.nix
 
     #SETTINGS
-    ./modules/settings/fastfetch.nix
+    ./modules/settings/fastfetch/fastfetch.nix
 
   ];
 

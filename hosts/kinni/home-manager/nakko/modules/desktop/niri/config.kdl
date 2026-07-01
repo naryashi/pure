@@ -87,10 +87,10 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1368x768@60.00"
+    mode "1280x720@60.001"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    //scale 2
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -113,7 +113,7 @@ input {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 2
+    gaps 6
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -199,7 +199,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 2
+        width 4
         active-color "#AE67B9"
         inactive-color "#505050"
 
@@ -301,7 +301,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-     slowdown 2.0
+     slowdown 3.0
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -340,11 +340,14 @@ window-rule {
 }
 
 // Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
+// (This example rule is  out with a "/-" in front.)
 /-window-rule {
     geometry-corner-radius 14
     clip-to-geometry true
-}
+    opacity 0.90
+    blur true
+    xray false
+    }
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -365,6 +368,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Z hotkey-overlay-title="Open zed" { spawn "zed"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -557,7 +561,7 @@ binds {
     // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
     // This bind corresponds to normal window maximizing,
     // e.g. by double-clicking on the titlebar.
-    Mod+M { maximize-window-to-edges; }
+    //Mod+M { maximize-window-to-edges; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
@@ -565,7 +569,7 @@ binds {
 
     Mod+C { center-column; }
 
-    // Center all fully visible columns on screen.
+    // Center all fully visible columns n screen.
     Mod+Ctrl+C { center-visible-columns; }
 
     // Finer width adjustments.

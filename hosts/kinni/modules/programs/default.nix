@@ -2,33 +2,12 @@
   ...
 }:
 {
-  #firefox
-  programs.firefox = {
-    enable = true;
-  };
 
-  #appimage
-  programs.appimage = {
-    enable = true;
-    binfmt = true;
+  programs = {
+    firefox.enable = true;
+    dconf.enable = true;
+    gamemode.enable = true;
+    steam.enable = true;
+    direnv.enable = true;
   };
-
-  #dconf
-  programs.dconf = {
-    enable = true;
-  };
-
-  #games
-  programs.steam = {
-    enable = true;
-  };
-  programs.gamemode = {
-    enable = true;
-  };
-
-  #direnv
-  programs.direnv = {
-    enable = true;
-  };
-
 }
