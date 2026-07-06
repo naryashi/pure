@@ -8,9 +8,9 @@
     ./hardware.nix
     ./hardware-configuration.nix
     ./desktop/niri/default.nix
-    ./desktop/gnome/settings/default.nix
-    #./desktop/plasma/settings/default.nix
-    ./dev/default.nix
+    #./desktop/gnome/settings/default.nix
+    ./desktop/plasma/settings/default.nix
+    #./dev/container.nix
     ./dev/libraries.nix
     ./modules/programs/appimage.nix
     ./modules/programs/default.nix
@@ -25,10 +25,6 @@
     "nix-command"
     "flakes"
   ];
-
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
 
   systemd.services.fwupd-refresh = {
     enable = false;

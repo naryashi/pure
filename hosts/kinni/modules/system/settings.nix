@@ -100,7 +100,7 @@
   services.tlp = lib.mkDefault {
     enable = true;
     settings = {
-      START_CHARGE_THRESH_BAT0 = 70;
+      START_CHARGE_THRESH_BAT0 = 40;
       CPU_BOOST_ON_AC = 1;
       CPU_BOOST_ON_BAT = 0;
       CPU_HWP_DYN_BOOST_ON_AC = 1;
@@ -112,7 +112,7 @@
       PLATFORM_PROFILE_ON_AC = "performance";
       PLATFORM_PROFILE_ON_BAT = "balanced_power";
       STOP_CHARGE_THRESH_BAT0 = 80;
-      CPU_MIN_PERF_ON_AC = 23;
+      CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 30;

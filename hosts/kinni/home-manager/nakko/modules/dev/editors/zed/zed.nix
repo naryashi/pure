@@ -25,6 +25,7 @@
       "git-firefly"
       "python"
       "rust"
+      "csharp"
 
     ];
 

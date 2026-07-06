@@ -62,5 +62,7 @@
     nuget
     dotnet-ef
 
+    #Exercism
+    exercism
   ];
 }

@@ -2,10 +2,11 @@
   ...
 }:
 {
-  programs.alacritty = {
-    enable = true;
-    theme = "catppuccin_mocha";
+  programs = {
+    alacritty = {
+      enable = true;
+      theme = "catppuccin_mocha";
+    };
+    starship.enable = true;
   };
-
-  programs.starship.enable = true;
 }

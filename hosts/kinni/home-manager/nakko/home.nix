@@ -27,7 +27,6 @@
     ./modules/terminal/shell/zsh.nix
 
     #programs
-    ./modules/settings/games.nix
     ./modules/settings/programs/others.nix
 
     #SETTINGS

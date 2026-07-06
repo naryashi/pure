@@ -20,8 +20,8 @@
       #system
       off = "shutdown now";
       upd-all = "nh os switch -u && nh home switch -u";
-
-      #games
+      os = "echo 'NixOS'";
+      #games`
       osu-wine = "steam-run osu-wine";
 
       #dev
@@ -33,6 +33,7 @@
 
       #formatter test
       fmt-test = "find . -name '*.nix' -type f";
+
     };
   };
   home.packages = with pkgs; [

@@ -6,8 +6,8 @@
   #kernel and boot
 
   #boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-  #boot.kernelPackages = pkgs.linuxPackages_cachyos-lto;
+  #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos-lto;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -17,7 +17,7 @@
 
   ];
   boot.kernel.sysctl = {
-    "vm.swappiness" = 70;
+    "vm.swappiness" = 40;
   };
 
 }
