@@ -54,7 +54,8 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │           │   │   ├── extensions.nix
 │       │           │   │   └── settings.nix
 │       │           │   └── niri
-│       │           │       ├── config.kdl
+│       │           │       ├── config
+│       │           │       │   └── config.kdl
 │       │           │       ├── default.nix
 │       │           │       └── noctalia
 │       │           │           └── default.nix
@@ -80,9 +81,10 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │               │   └── alacritty.nix
 │       │               ├── kitty
 │       │               │   └── kitty.nix
-│       │               └── shell
-│       │                   ├── fish.nix
-│       │                   └── zsh.nix
+│       │               ├── shell
+│       │               │   └── zsh.nix
+│       │               └── starship
+│       │                   └── default.nix
 │       ├── modules
 │       │   ├── programs
 │       │   │   ├── appimage.nix
@@ -96,11 +98,10 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       └── profiles
 │           └── powersave.nix
 ├── README.md
-├── script
-│   └── build.sh
-└── ystemctl status home-manager-naryashi.serviceq
+└── script
+    └── build.sh
 
-36 directories, 40 files
+38 directories, 39 files
 ```
 ---
 
