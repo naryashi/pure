@@ -16,40 +16,43 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/legacy-v4";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-gaming.url = "github:fufexan/nix-gaming";
     thou-packages.url = "github:thou-vow/nix-packages";
 
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   outputs =
     {
+      self,
       nixpkgs,
       home-manager,
       nix-gaming,
       thou-packages,
-      stylix,
       chaotic,
       niri,
       ...
     }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
     {
+
+      system = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
 
       niri-flake.cache.enable = true;
 
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+      formatter.x86_64-linux = nixpkgs.legacyPackages."x86_64-linux".nixfmt-tree;
 
       nixosConfigurations.kinni = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           chaotic.nixosModules.default
-          stylix.nixosModules.stylix
           ./hosts/kinni/configuration.nix
           ./hosts/kinni/hardware.nix
           ./hosts/kinni/hardware-configuration.nix
@@ -58,7 +61,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              users.nakko = import ./hosts/kinni/home-manager/nakko/home.nix;
+              users.naryashi = import ./hosts/kinni/home-manager/naryashi/home.nix;
               extraSpecialArgs = { inherit inputs; };
             };
 
@@ -75,10 +78,26 @@
         ];
       };
 
-      homeConfigurations."nakko@kinni" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./hosts/kinni/home-manager/nakko/home.nix ];
+      homeConfigurations."naryashi@kinni" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [ ./hosts/kinni/home-manager/naryashi/home.nix ];
         extraSpecialArgs = { inherit inputs; };
       };
     };
+  nixConfig = {
+    extra-substituters = [
+      "https://nyx-cache.chaotic.cx/"
+      "https://thou-vow.cachix.org/"
+      "https://cache.nixos.org/"
+      "https://nix-gaming.cachix.org"
+      "https://noctalia.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk="
+      "thou-vow.cachix.org-1:n6zUvWYOI7kh0jgd+ghWhxeMd9tVdYF2KdOvufJ/Qy4="
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
 }

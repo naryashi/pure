@@ -129,9 +129,9 @@
   #};
 
   #user area
-  users.users.nakko = {
+  users.users.naryashi = {
     isNormalUser = true;
-    description = "nakko";
+    description = "naryashi";
     extraGroups = [
       "networkmanager"
       "wheel"

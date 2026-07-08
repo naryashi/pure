@@ -2,6 +2,8 @@
 
 A minimal NixOS configuration for daily driving.
 
+This repo contain my NixOS configuration and my wallpaper :)
+
 Special thanks to [thou vow](https://github.com/thou-vow) for support.
 
 > **Note**: This setup works for me — on my machine. Yours may differ.
@@ -38,13 +40,13 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │       └── settings
 │       │           └── default.nix
 │       ├── dev
-│       │   ├── default.nix
+│       │   ├── container.nix
 │       │   └── libraries.nix
 │       ├── fs.nix
 │       ├── hardware-configuration.nix
 │       ├── hardware.nix
 │       ├── home-manager
-│       │   └── nakko
+│       │   └── naryashi
 │       │       ├── home.nix
 │       │       └── modules
 │       │           ├── desktop
@@ -52,8 +54,10 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │           │   │   ├── extensions.nix
 │       │           │   │   └── settings.nix
 │       │           │   └── niri
-│       │           │       ├── binds.nix
-│       │           │       └── default.nix
+│       │           │       ├── config.kdl
+│       │           │       ├── default.nix
+│       │           │       └── noctalia
+│       │           │           └── default.nix
 │       │           ├── dev
 │       │           │   ├── editors
 │       │           │   │   ├── helix
@@ -67,8 +71,8 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │           │   ├── others.nix
 │       │           │   └── system.nix
 │       │           ├── settings
-│       │           │   ├── fastfetch.nix
-│       │           │   ├── games.nix
+│       │           │   ├── fastfetch
+│       │           │   │   └── fastfetch.nix
 │       │           │   └── programs
 │       │           │       └── others.nix
 │       │           └── terminal
@@ -81,6 +85,7 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │                   └── zsh.nix
 │       ├── modules
 │       │   ├── programs
+│       │   │   ├── appimage.nix
 │       │   │   ├── default.nix
 │       │   │   └── services.nix
 │       │   └── system
@@ -90,8 +95,12 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │   └── settings.nix
 │       └── profiles
 │           └── powersave.nix
-└── README.md
-33 directories, 37 files
+├── README.md
+├── script
+│   └── build.sh
+└── ystemctl status home-manager-naryashi.serviceq
+
+36 directories, 40 files
 ```
 ---
 

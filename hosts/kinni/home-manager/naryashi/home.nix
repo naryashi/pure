@@ -6,9 +6,10 @@
   imports = [
 
     #DESKTOP
-    ./modules/desktop/gnome/extensions.nix
+    #./modules/desktop/gnome/extensions.nix
     ./modules/desktop/gnome/settings.nix
     ./modules/desktop/niri/default.nix
+    ./modules/desktop/niri/noctalia/default.nix
 
     #DEV
     ./modules/dev/editors/zed/zed.nix
@@ -23,7 +24,6 @@
     #terminal and shell
     ./modules/terminal/alacritty/alacritty.nix
     ./modules/terminal/kitty/kitty.nix
-    ./modules/terminal/shell/fish.nix
     ./modules/terminal/shell/zsh.nix
 
     #programs
@@ -35,8 +35,8 @@
   ];
 
   #home
-  home.username = "nakko";
-  home.homeDirectory = "/home/nakko";
+  home.username = "naryashi";
+  home.homeDirectory = "/home/naryashi";
   # home.packages = with pkgs; [
 
   # ];

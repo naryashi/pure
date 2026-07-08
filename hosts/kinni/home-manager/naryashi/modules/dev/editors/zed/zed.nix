@@ -25,8 +25,9 @@
       "git-firefly"
       "python"
       "rust"
+      "bash"
       "csharp"
-
+      "kdl"
     ];
 
     extraPackages = with pkgs; [
@@ -36,8 +37,8 @@
     defaultEditor = true;
 
     userSettings = {
-      theme = lib.mkDefault "Base16 Catppuccin Mocha";
-      icon_themes = lib.mkDefault "Catppuccin Mocha";
+      theme = lib.mkDefault "Base16 Tokyo City Dark";
+      icon_themes = lib.mkDefault "Catppuccin icons";
       vim_mode = false;
       ui_font_size = lib.mkDefault 18;
       buffer_font_size = lib.mkDefault 14;

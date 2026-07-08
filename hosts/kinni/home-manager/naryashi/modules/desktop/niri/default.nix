@@ -1,17 +1,18 @@
 {
+
   inputs,
   pkgs,
   ...
 }:
 {
-
   imports = [
     inputs.niri.homeModules.niri
+    ./noctalia/default.nix
   ];
 
   programs.niri = {
     enable = true;
-    config = builtins.readFile ./config.kdl;
+    config = builtins.readFile ./config/config.kdl;
   };
 
   programs = {

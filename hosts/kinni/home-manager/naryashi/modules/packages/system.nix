@@ -27,6 +27,7 @@
     unzip
     zenity
     alacritty
+    onefetch
 
     #fonts
     nerd-fonts.adwaita-mono

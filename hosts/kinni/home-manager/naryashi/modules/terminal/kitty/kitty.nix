@@ -11,7 +11,7 @@
   programs.kitty = {
     enable = true;
     enableGitIntegration = true;
-    themeFile = "Catppuccin-Mocha";
+    themeFile = "tokyo_night_storm";
     shellIntegration.enableZshIntegration = true;
     settings = {
       shell = "${pkgs.zsh}/bin/zsh";

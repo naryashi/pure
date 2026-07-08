@@ -1,13 +1,15 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 {
   environment.systemPackages = with pkgs; [
     niri
-    noctalia-shell
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
+    kdePackages.xdg-desktop-portal-kde
   ];
 
   programs.niri = {
@@ -21,16 +23,18 @@
 
   xdg.portal = {
     config.niri = {
-      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+      "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ]; # or "kde"
     };
 
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
       xdg-desktop-portal-gtk
+      kdePackages.xdg-desktop-portal-kde
     ];
+    config.common = {
+      default = "gtk";
+    };
   };
-
   xdg.portal.xdgOpenUsePortal = true;
-
 }
