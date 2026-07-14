@@ -7,9 +7,7 @@
     piper
     libratbag
     nh
-    auto-cpufreq
     tlp
-    thinkfan
     home-manager
   ];
 }

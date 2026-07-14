@@ -23,17 +23,17 @@
 
   xdg.portal = {
     config.niri = {
-      "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ]; # or "kde"
+      "org.freedesktop.impl.portal.FileChooser" = [ "kde" ]; # or "kde"
     };
 
     enable = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-gtk
+      #xdg-desktop-portal-gnome
+      #xdg-desktop-portal-gtk
       kdePackages.xdg-desktop-portal-kde
     ];
     config.common = {
-      default = "gtk";
+      default = "plasma";
     };
   };
   xdg.portal.xdgOpenUsePortal = true;

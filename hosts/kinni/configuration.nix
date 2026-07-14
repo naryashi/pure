@@ -11,14 +11,14 @@
     ./desktop/gnome/settings/default.nix
     #./desktop/plasma/settings/default.nix
     #./dev/container.nix
-    ./dev/libraries.nix
+    #./dev/libraries.nix
     ./modules/programs/appimage.nix
     ./modules/programs/default.nix
     ./modules/programs/services.nix
     ./modules/system/settings.nix
     ./packages/default.nix
     ./packages/settings.nix
-    ./profiles/powersave.nix
+    #./profiles/powersave.nix
   ];
 
   nix.settings.experimental-features = [

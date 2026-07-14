@@ -13,12 +13,13 @@
     extensions = [
       #themes
       "base16"
+      "Tokyo Night Themes"
 
       #icons
       "Catppucin Icons"
 
       #lang
-      "fish"
+      "zsh"
       "nix"
       "toml"
       "html"
@@ -37,9 +38,18 @@
     defaultEditor = true;
 
     userSettings = {
-      theme = lib.mkDefault "Base16 Tokyo City Dark";
-      icon_themes = lib.mkDefault "Catppuccin icons";
+      appearance = {
+        theme = lib.mkDefault "Tokyo Night";
+        icon_themes = lib.mkDefault "Catppuccin icons";
+        cursor_blink = false;
+      };
+      panels = {
+        project_panel_dock = "left";
+        git_status = false;
+        terminal_dock = "right";
+      };
       vim_mode = false;
+
       ui_font_size = lib.mkDefault 18;
       buffer_font_size = lib.mkDefault 14;
       hour_format = lib.mkDefault "hour24";

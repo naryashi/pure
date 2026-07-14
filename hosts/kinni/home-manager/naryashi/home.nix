@@ -6,7 +6,7 @@
   imports = [
 
     #DESKTOP
-    #./modules/desktop/gnome/extensions.nix
+    ./modules/desktop/gnome/extensions.nix
     ./modules/desktop/gnome/settings.nix
     ./modules/desktop/niri/default.nix
     ./modules/desktop/niri/noctalia/default.nix
@@ -22,10 +22,10 @@
     ./modules/packages/system.nix
 
     #terminal and shell
-    ./modules/terminal/alacritty/alacritty.nix
+    #./modules/terminal/alacritty/alacritty.nix
     ./modules/terminal/kitty/kitty.nix
     ./modules/terminal/shell/zsh.nix
-
+    ./modules/terminal/starship/default.nix
     #programs
     ./modules/settings/programs/others.nix
 

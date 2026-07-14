@@ -17,14 +17,9 @@
 
   programs = {
 
-    alacritty.enable = true;
+    alacritty.enable = false;
     fuzzel.enable = true;
     waybar.enable = false;
-  };
-  services = {
-    mako.enable = false;
-    swayidle.enable = true;
-    polkit-gnome.enable = true;
   };
   home.packages = with pkgs; [
 

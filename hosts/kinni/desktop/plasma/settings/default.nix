@@ -11,34 +11,34 @@
       enable = true;
       wayland.enable = true;
       autoNumlock = true;
-
     };
 
     #PLASMA ENVIROMENT
-    desktopManager.plasma6.enable = lib.mkDefault true;
-
+    desktopManager.plasma6.enable = true;
   };
-
-  environment.systemPackages = with pkgs; [
-    kdePackages.kate
-    kdePackages.kcalc
-
-    #themes
-    catppuccin-kde
-
-  ];
-
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    plasma-browser-integration
     elisa
-    discover
+    konsole
+    okular
     gwenview
-    plasma-nano
-    plasma5support
-    kwalletmanager
-    plasma-systemmonitor
-    sweeper
-    baloo
-  ];
+    spectacle
+    kate
+    kdenlive
+    k3b
+    kmail
+    korganizer
+    akregator
+    ktorrent
+    kget
+    kdebugsettings
+    ksystemlog
+    kcron
+    kmousetool
+    kmag
+    plasma-browser-integration
+    oxygen
+    breeze-grub
+    breeze-plymouth
 
+  ];
 }

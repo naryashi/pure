@@ -25,7 +25,6 @@
     tree
     wget
     unzip
-    zenity
     alacritty
     onefetch
 

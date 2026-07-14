@@ -39,6 +39,8 @@
     gnome-system-monitor
     gnome-weather
     gnome-tour
-    xterm # (?)
+    xterm
+    gnome-text-editor
+    gnome-disk-utility
   ];
 }

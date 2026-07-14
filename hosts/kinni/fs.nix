@@ -4,10 +4,14 @@
 {
   fileSystems = {
     "/".options = [
-      "compress=lzo"
+      "compress=zstd"
+      "noatime"
     ];
     "/home".options = [
-      "compress=lzo"
+      "compress=zstd"
+      "noatime"
     ];
+    
   };
+  
 }

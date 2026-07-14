@@ -13,15 +13,6 @@
     # C/C++ Toolchain
     clang
     clang-tools
-    lld
-    gdb
-    lldb
-    valgrind
-
-    # C/C++ Libraries
-    boost
-    gtest
-    doxygen
 
     # Nix Toolchain
     nix
