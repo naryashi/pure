@@ -6,10 +6,10 @@
   imports = [
 
     #DESKTOP
-    ./modules/desktop/gnome/extensions.nix
-    ./modules/desktop/gnome/settings.nix
-    ./modules/desktop/niri/default.nix
-    ./modules/desktop/niri/noctalia/default.nix
+    #./modules/desktop/gnome/extensions.nix
+    #./modules/desktop/gnome/settings.nix
+    #./modules/desktop/niri/default.nix
+    #./modules/desktop/niri/noctalia/default.nix
 
     #DEV
     ./modules/dev/editors/zed/zed.nix
@@ -26,8 +26,6 @@
     ./modules/terminal/kitty/kitty.nix
     ./modules/terminal/shell/zsh.nix
     ./modules/terminal/starship/default.nix
-    #programs
-    ./modules/settings/programs/others.nix
 
     #SETTINGS
     ./modules/settings/fastfetch/fastfetch.nix

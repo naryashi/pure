@@ -7,10 +7,10 @@
     ./fs.nix
     ./hardware.nix
     ./hardware-configuration.nix
-    ./desktop/niri/default.nix
-    ./desktop/gnome/settings/default.nix
-    #./desktop/plasma/settings/default.nix
-    #./dev/container.nix
+    #./desktop/niri/default.nix
+    #./desktop/gnome/settings/default.nix
+    ./desktop/plasma/settings/default.nix
+    ./dev/container.nix
     #./dev/libraries.nix
     ./modules/programs/appimage.nix
     ./modules/programs/default.nix
@@ -31,6 +31,6 @@
     wantedBy = [ ];
   };
 
-  system.stateVersion = "26.05"; # Did you read the comment?
+  system.stateVersion = "26.05";
 
 }

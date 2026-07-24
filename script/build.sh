@@ -4,13 +4,13 @@
 
 sudo rm -rf ~/pure/hosts/kinni/hardware-configuration.nix
 
-sudo mv ~/pure /
+sudo mv ~/pure  /
 
 sudo chown -R naryashi:users /pure
 
 sudo chmod u+w /pure
 
-sudo cp /etc/nixos/hardware-configuration.nix
+sudo cp /etc/nixos/hardware-configuration.nix /pure/hosts/kinni
 
 clear
 
